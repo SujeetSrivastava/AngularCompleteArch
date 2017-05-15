@@ -1,19 +1,38 @@
 <div class="md-padding" flex layout-sm="column">
     <md-card class="text-center">
         <md-card-content>
-            <h1>{{ vm.title }}</h1>
-            <h3>{{ vm.version }}</h3>
-            <p>This is a template for a simple home screen website. Use it as a starting point to create something more unique.</p>
-            <code>app/modules/home/home.html</code>
-            <br>
-            <p><a href="http://www.github.com/newaeonweb/generator-angm" class="btn btn-primary" role="button">Learn more »</a></p>
-            <md-divider class="margin-top-20"></md-divider>
-            <h1 class="margin-top-50">Features</h1>
-            <ul>
-                <li class=" text-center" ng-repeat="item in vm.listFeatures">
-                    <p><ng-md-icon icon="check"></ng-md-icon> {{item.feature}}</p>
-                </li>
-            </ul>
+            <div class="container" ng-app="formvalid">
+  <div class="panel">
+  <div class="panel-heading border">    
+    <h2>Data table using jquery datatable in Angularjs
+    </h2>
+  </div>
+  <div class="panel-body">
+      <table class="table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="vm.dataTableOpt">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Position</th>
+          <th>Office</th>
+          <th>Age</th>
+          <th>Start Date</th>
+        </tr>
+      </thead>
+        <tbody>
+          <tr ng-repeat="n in vm.data">
+            <td>{{$index+1}}</td>
+            <td>{{n[0]}}</td>
+            <td>{{n[1]}}</td>
+            <td>{{n[2]}}</td>
+            <td>{{n[3]}}</td>
+            <td>{{n[4] | date:'dd/MM/yyyy'}}</td>
+          </tr>
+        </tbody>
+    </table>
+  </div>
+</div>
+</div>
         </md-card-content>
     </md-card>
 </div>

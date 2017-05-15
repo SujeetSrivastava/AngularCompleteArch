@@ -14,6 +14,7 @@
 		'ngResource',
 		'ngAria',
 		 'ui.bootstrap',
+		 'ui.utils',
 		 'ngMaterial',
 		'ngMdIcons',
 		'ngMessages',
