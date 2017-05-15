@@ -1,38 +1,45 @@
 <div class="md-padding" flex layout-sm="column">
     <md-card class="text-center">
         <md-card-content>
+            <h1>{{ vm.title }}</h1>
+            <h3>{{ vm.version }}</h3>
+            
             <div class="container" ng-app="formvalid">
-  <div class="panel">
-  <div class="panel-heading border">    
-    <h2>Data table using jquery datatable in Angularjs
-    </h2>
-  </div>
-  <div class="panel-body">
-      <table class="table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="vm.dataTableOpt">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Name</th>
-          <th>Position</th>
-          <th>Office</th>
-          <th>Age</th>
-          <th>Start Date</th>
-        </tr>
-      </thead>
-        <tbody>
-          <tr ng-repeat="n in vm.data">
-            <td>{{$index+1}}</td>
-            <td>{{n[0]}}</td>
-            <td>{{n[1]}}</td>
-            <td>{{n[2]}}</td>
-            <td>{{n[3]}}</td>
-            <td>{{n[4] | date:'dd/MM/yyyy'}}</td>
-          </tr>
-        </tbody>
-    </table>
-  </div>
-</div>
-</div>
+                <div class="panel">
+                  <div class="panel-heading border">    
+                    <h2>Data table using jquery datatable in Angularjs
+                    </h2>
+                  </div>
+
+
+                  <div class="panel-body">
+                    <table class="table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="vm.dataTableOpt">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>FName</th>
+                          <th>LName</th>
+                          <th>Email</th>
+                          <th>Contact</th>
+                          <th>Status</th>
+                        </tr>
+                      </thead>
+                        <tbody>
+                          <tr ng-repeat="driv in vm.drivData">
+                            <td>{{$index+1}}</td>
+                            <td>{{driv.firstname}}</td>
+                            <td>{{driv.lastname}}</td>
+                            <td>{{driv.email}}</td>
+                            <td>{{driv.contactno}}</td>
+                            <td><button class="btn" ng-class = "{ 'btn-primary' : driv.status === 'true', 'btn-danger': driv.status !== 'true'}">{{driv.status === 'true' ? 'Active' : 'InActive'}}</button></td>
+                            <!-- <td>{{n[4] | date:'dd/MM/yyyy'}}</td> -->
+                          </tr>
+                        </tbody>
+                    </table>
+                  </div>
+
+                </div>  
+            </div>
         </md-card-content>
     </md-card>
 </div>

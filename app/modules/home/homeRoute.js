@@ -20,7 +20,7 @@ angular.module('boon4')
 			})
 			.state('login', {
 				url:'/login',
-				templateUrl: 'app/modules/home/login.html',
+				templateUrl: 'app/modules/login/login.html',
 				controller: 'LoginCtrl',
 				controllerAs: 'vm'
 			})

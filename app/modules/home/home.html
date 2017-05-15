@@ -42,9 +42,11 @@
             </md-button>
             <h3>boon4</h3>
             <span flex></span>
-            <md-button aria-label="Search" ng-click="showSearch = !showSearch">
+            <div ng-if= "vm.flagSearch">
+            <md-button aria-label="Search"ng-click="showSearch = !showSearch">
                 <ng-md-icon icon="search"></ng-md-icon>
             </md-button>
+            </div>
             <md-menu>
                 <md-button aria-label="Open Settings" ng-click="layout.openMenu($mdOpenMenu, $event)">
                     <md-icon> more_vert </md-icon>
