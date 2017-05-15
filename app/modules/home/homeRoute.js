@@ -11,17 +11,22 @@
 angular.module('boon4')
 	.config(['$stateProvider', function ($stateProvider) {
 		$stateProvider
-			
 			.state('home', {
-				url: '',
+				url: '/home',
 				abstract: true,
 				templateUrl: 'app/modules/home/home.html',
 				controller: 'HomeCtrl',
 				controllerAs: 'vm'
 			})
-			.state('home.login', {
+			.state('login', {
 				url:'/login',
-				templateUrl: 'app/modules/home/login.html'
+				templateUrl: 'app/modules/home/login.html',
+				controller: 'LoginCtrl',
+				controllerAs: 'vm'
+			})
+			.state('home.dashboard', {
+				url:'/dashboard',
+				templateUrl: 'app/modules/home/dashboard.html'
 			});
 			
 	}]);

@@ -11,9 +11,8 @@
 
 	angular
 		.module('boon4')
-		.controller('HomeCtrl', Home);
+		.controller('LoginCtrl', Login);
 
-	Home.$inject = ['homeService'];
 
 	/*
 	* recommend
@@ -21,14 +20,21 @@
 	* and bindable members up top.
 	*/
 
-	function Home(homeService) {
+	function Login( $state, $stateParams) {
 		/*jshint validthis: true */
 		var vm = this;
 		vm.title = "Hello, boon4!";
 		vm.version = "1.0.0";
-		vm.listFeatures = homeService.getFeaturesList();
 		vm.loginID = "";
 		vm.loginPwd = "";
+
+
+		vm.logon = function(){
+			//alert('I git clicked login' + vm.loginID + vm.loginPwd );
+			$state.transitionTo('home.dashboard');
+
+		}
+
 	}
 
 })();

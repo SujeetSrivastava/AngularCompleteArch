@@ -23,6 +23,7 @@
 		'ngSanitize',
 		'ui.router',
 		'home',
+		'login',
 	]);
 
 })();
