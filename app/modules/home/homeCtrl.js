@@ -27,6 +27,13 @@
 		vm.title = "Hello, boon4!";
 		vm.version = "1.0.0";
 		vm.listFeatures = homeService.getFeaturesList();
+		vm.loginID = "";
+		vm.loginPwd = "";
+
+
+		vm.logon = function(){
+			alert('I git clicked login' + vm.loginID + vm.loginPwd );
+		}
 
 	}
 

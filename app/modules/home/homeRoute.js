@@ -19,9 +19,9 @@ angular.module('boon4')
 				controller: 'HomeCtrl',
 				controllerAs: 'vm'
 			})
-			.state('home.dashboard', {
-				url:'/dashboard',
-				templateUrl: 'app/modules/home/dashboard.html'
+			.state('home.login', {
+				url:'/login',
+				templateUrl: 'app/modules/home/login.html'
 			});
 			
 	}]);
