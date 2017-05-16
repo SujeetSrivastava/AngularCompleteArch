@@ -1,0 +1,10 @@
+{
+  "generator-angm": {
+    "appName": "boon4",
+    "angularCookies": true,
+    "angularAnimate": true,
+    "angularSanitize": true,
+    "angularBootstrap": true,
+    "angularMaterial": true
+  }
+}
