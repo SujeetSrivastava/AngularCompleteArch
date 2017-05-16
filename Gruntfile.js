@@ -121,7 +121,9 @@ module.exports = function (grunt) {
 						'app/**/*Route.js',
 						'app/**/*Ctrl.js',
 						'app/**/*Service.js',
-						'app/**/*Directive.js'
+						'app/**/*Directive.js',
+						'app/js/*.js',
+						'src/bower_components/bootstrap/dist/css/bootstrap.min.css'
 					]
 				}
 			},
